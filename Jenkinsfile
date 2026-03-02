@@ -1,7 +1,10 @@
 
 pipeline {
     agent any 
-
+// ADD THIS SECTION
+    tools {
+        git 'Default' // Or the name of the git tool configured in your Jenkins
+    }
     environment {
         DOCKER_CREDENTIALS_ID = 'roseaw-dockerhub'                                 // <------DON'T change this
         DOCKER_IMAGE = 'cithit/pyakurh2'                                                 // <------change this
